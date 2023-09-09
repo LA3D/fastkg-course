@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./00_intro.html" rel="" target="">
+    <a class="nav-link" href="./01_intro.html" rel="" target="">
  <span class="menu-text">Introduction</span></a>
   </li>  
 </ul>
@@ -105,7 +105,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#using-the-fast-approach-for-teaching-knowledge-grpahs" id="toc-using-the-fast-approach-for-teaching-knowledge-grpahs" class="nav-link active" data-scroll-target="#using-the-fast-approach-for-teaching-knowledge-grpahs">Using the “Fast” Approach for Teaching Knowledge Grpahs</a></li>
+  <li><a href="#fastkg-course-a-fast.ai-approach-to-learning-knowledge-graphs" id="toc-fastkg-course-a-fast.ai-approach-to-learning-knowledge-graphs" class="nav-link active" data-scroll-target="#fastkg-course-a-fast.ai-approach-to-learning-knowledge-graphs">FastKG-Course: A Fast.ai Approach to Learning Knowledge Graphs</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
+  <li><a href="#contributors" id="toc-contributors" class="nav-link" data-scroll-target="#contributors">Contributors</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -129,11 +139,77 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="using-the-fast-approach-for-teaching-knowledge-grpahs" class="level1">
-<h1>Using the “Fast” Approach for Teaching Knowledge Grpahs</h1>
-<p>This website is meant to provide a quick reference to Knowledge Graphs (KGs), Knowledge Graph Technologies, Semantic Technologies and Large Language Models for various projects part of <a href="https://la3d.github.io/nuggets/">Laboratory for Assured AI Applications Development</a> in the <a href="https://crc.nd.edu/">Center for Research Computing</a> at the <a href="https://www.nd.edu">University of Notre Dame</a>.</p>
+<section id="fastkg-course-a-fast.ai-approach-to-learning-knowledge-graphs" class="level1">
+<h1>FastKG-Course: A Fast.ai Approach to Learning Knowledge Graphs</h1>
+<p><img src="images/logo.png" class="img-fluid"></p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Welcome to FastKG-Course, an interactive course designed to make you proficient in Knowledge Graphs, Semantic Technologies, Ontology, and more. This project is affiliated with the <a href="https://la3d.github.io/nuggets/about">Laboratory for Assured AI Applications Development</a> in the <a href="https://crc.nd.edu">Center for Research Computing</a> at the <a href="https://www.nd.edu">University of Notre Dame</a>.</p>
+</section>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
+<ul>
+<li>Interactive Jupyter Notebooks</li>
+<li>Hands-on Tutorials</li>
+<li>Use of fast.ai and kglab libraries</li>
+</ul>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://codespaces.new/LA3D/fastkg-course"><img src="https://github.com/codespaces/badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Open in GitHub Codespaces</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>(Optional) Fork this repository</li>
+<li>Open the project in <a href="https://github.com/features/codespaces">GitHub Codespaces</a></li>
+<li>The <a href="https://containers.dev/">devcontainer</a> will automatically set up your environment</li>
+<li>Start the Jupyter server and open the introductory notebook</li>
+</ol>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>Before starting this course, it is highly recommended to complete the following Fast.ai courses:</p>
+<ul>
+<li><a href="https://course.fast.ai/">Practical Deep Learning for Coders</a></li>
+<li><a href="https://course.fast.ai/Resources/book.html">Deep Learning for Coders with fastai &amp; Pytorch</a></li>
+<li><a href="https://github.com/fastai/course22/blob/master/01-jupyter-notebook-101.ipynb">Jupyter Notebook 101</a></li>
+</ul>
+<p>Additional requirements:</p>
+<ul>
+<li>Basic knowledge of Python</li>
+<li>Familiarity with machine learning concepts</li>
+</ul>
+</section>
+<section id="usage" class="level2">
+<h2 class="anchored" data-anchor-id="usage">Usage</h2>
+<p>Navigate through the Jupyter notebooks in sequence for a curated educational path, or feel free to explore topics that interest you.</p>
+<p>The <a href=".devcontainer/devcontainer.json">dev container</a> is fully configured with software and <a href=".devcontainer/requirements.txt">KG and machine learning libraries</a> needed for this course.</p>
+</section>
+<section id="contributors" class="level2">
+<h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
+<ul>
+<li>Charles F Vardeman II</li>
+</ul>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<p>This project is part of the Laboratory for Assured AI Applications Development in the Center for Research Computing at the University of Notre Dame. The <a href="https://github.com/DerwenAI/kglab">kglab</a> project for providing some integrated tools for working with Knowledge Graphs as well as an <a href="https://derwen.ai/docs/kgl/tutorial/">excellent tutorial</a>. Content generation and assistance have been facilitated using OpenAI’s GPT-4 language model. <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT August 3, 2023 version</a></p>
+</section>
+<section id="license" class="level2">
+<h2 class="anchored" data-anchor-id="license">License</h2>
+<p>This project is dual-licensed under:</p>
+<ul>
+<li>MIT License for the software components. See <code>LICENSE-MIT</code> for more details.</li>
+<li>Creative Commons Attribution 4.0 International (CC BY 4.0) for the educational content. See <code>LICENSE-CC-BY</code> for more details.</li>
+<li>The <a href="https://github.com/DerwenAI/kglab"><code>kglab</code></a> submodule from <a href="https://derwen.ai/">derwen.ai</a> is licensed under the MIT License.</li>
+</ul>
+<p>You are free to use the project under either of the licenses, depending on your needs.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

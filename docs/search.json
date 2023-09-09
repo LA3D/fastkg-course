@@ -1,23 +1,79 @@
 [
   {
-    "objectID": "00_intro.html",
-    "href": "00_intro.html",
+    "objectID": "01_intro.html",
+    "href": "01_intro.html",
     "title": "Introduction",
     "section": "",
-    "text": "Code\nfrom ipywidgets import interact\nimport networkx as nx\nimport matplotlib.pyplot as plt\n\ndef plot_graph(nodes=5, edges=5):\n    G = nx.random_graphs.erdos_renyi_graph(nodes, edges / nodes)\n    nx.draw(G, with_labels=True)\n    plt.show()\n\ninteract(plot_graph, nodes=(2, 10), edges=(1, 20))\n\n\nModuleNotFoundError: No module named 'ipywidgets'"
+    "text": "Code\n# Import libraries\nimport fastai\nimport kglab\nimport pandas\n\n# Print versions\nprint(f'fastai version: {fastai.__version__}')\nprint(f'kglab version: {kglab.__version__}')\nprint(f'pandas version: {pandas.__version__}')\n\n\nfastai version: 2.7.12\nkglab version: 0.6.6"
   },
   {
-    "objectID": "00_intro.html#introduction-to-knowledge-graphs-and-semantic-technologies",
-    "href": "00_intro.html#introduction-to-knowledge-graphs-and-semantic-technologies",
+    "objectID": "01_intro.html#introduction-to-knowledge-graphs-and-semantic-technologies",
+    "href": "01_intro.html#introduction-to-knowledge-graphs-and-semantic-technologies",
     "title": "Introduction",
     "section": "",
-    "text": "Code\nfrom ipywidgets import interact\nimport networkx as nx\nimport matplotlib.pyplot as plt\n\ndef plot_graph(nodes=5, edges=5):\n    G = nx.random_graphs.erdos_renyi_graph(nodes, edges / nodes)\n    nx.draw(G, with_labels=True)\n    plt.show()\n\ninteract(plot_graph, nodes=(2, 10), edges=(1, 20))\n\n\nModuleNotFoundError: No module named 'ipywidgets'"
+    "text": "Code\n# Import libraries\nimport fastai\nimport kglab\nimport pandas\n\n# Print versions\nprint(f'fastai version: {fastai.__version__}')\nprint(f'kglab version: {kglab.__version__}')\nprint(f'pandas version: {pandas.__version__}')\n\n\nfastai version: 2.7.12\nkglab version: 0.6.6"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "A “Fast” Introduction to Knowledge Graphs",
     "section": "",
-    "text": "Using the “Fast” Approach for Teaching Knowledge Grpahs\nThis website is meant to provide a quick reference to Knowledge Graphs (KGs), Knowledge Graph Technologies, Semantic Technologies and Large Language Models for various projects part of Laboratory for Assured AI Applications Development in the Center for Research Computing at the University of Notre Dame."
+    "text": "Welcome to FastKG-Course, an interactive course designed to make you proficient in Knowledge Graphs, Semantic Technologies, Ontology, and more. This project is affiliated with the Laboratory for Assured AI Applications Development in the Center for Research Computing at the University of Notre Dame.\n\n\n\n\nInteractive Jupyter Notebooks\nHands-on Tutorials\nUse of fast.ai and kglab libraries\n\n\n\n\n\n\n\nOpen in GitHub Codespaces\n\n\n\n(Optional) Fork this repository\nOpen the project in GitHub Codespaces\nThe devcontainer will automatically set up your environment\nStart the Jupyter server and open the introductory notebook\n\n\n\n\nBefore starting this course, it is highly recommended to complete the following Fast.ai courses:\n\nPractical Deep Learning for Coders\nDeep Learning for Coders with fastai & Pytorch\nJupyter Notebook 101\n\nAdditional requirements:\n\nBasic knowledge of Python\nFamiliarity with machine learning concepts\n\n\n\n\nNavigate through the Jupyter notebooks in sequence for a curated educational path, or feel free to explore topics that interest you.\nThe dev container is fully configured with software and KG and machine learning libraries needed for this course.\n\n\n\n\nCharles F Vardeman II\n\n\n\n\nThis project is part of the Laboratory for Assured AI Applications Development in the Center for Research Computing at the University of Notre Dame. The kglab project for providing some integrated tools for working with Knowledge Graphs as well as an excellent tutorial. Content generation and assistance have been facilitated using OpenAI’s GPT-4 language model. ChatGPT August 3, 2023 version\n\n\n\nThis project is dual-licensed under:\n\nMIT License for the software components. See LICENSE-MIT for more details.\nCreative Commons Attribution 4.0 International (CC BY 4.0) for the educational content. See LICENSE-CC-BY for more details.\nThe kglab submodule from derwen.ai is licensed under the MIT License.\n\nYou are free to use the project under either of the licenses, depending on your needs."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "A “Fast” Introduction to Knowledge Graphs",
+    "section": "",
+    "text": "Welcome to FastKG-Course, an interactive course designed to make you proficient in Knowledge Graphs, Semantic Technologies, Ontology, and more. This project is affiliated with the Laboratory for Assured AI Applications Development in the Center for Research Computing at the University of Notre Dame."
+  },
+  {
+    "objectID": "index.html#features",
+    "href": "index.html#features",
+    "title": "A “Fast” Introduction to Knowledge Graphs",
+    "section": "",
+    "text": "Interactive Jupyter Notebooks\nHands-on Tutorials\nUse of fast.ai and kglab libraries"
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "A “Fast” Introduction to Knowledge Graphs",
+    "section": "",
+    "text": "Open in GitHub Codespaces\n\n\n\n(Optional) Fork this repository\nOpen the project in GitHub Codespaces\nThe devcontainer will automatically set up your environment\nStart the Jupyter server and open the introductory notebook"
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "A “Fast” Introduction to Knowledge Graphs",
+    "section": "",
+    "text": "Before starting this course, it is highly recommended to complete the following Fast.ai courses:\n\nPractical Deep Learning for Coders\nDeep Learning for Coders with fastai & Pytorch\nJupyter Notebook 101\n\nAdditional requirements:\n\nBasic knowledge of Python\nFamiliarity with machine learning concepts"
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "A “Fast” Introduction to Knowledge Graphs",
+    "section": "",
+    "text": "Navigate through the Jupyter notebooks in sequence for a curated educational path, or feel free to explore topics that interest you.\nThe dev container is fully configured with software and KG and machine learning libraries needed for this course."
+  },
+  {
+    "objectID": "index.html#contributors",
+    "href": "index.html#contributors",
+    "title": "A “Fast” Introduction to Knowledge Graphs",
+    "section": "",
+    "text": "Charles F Vardeman II"
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "A “Fast” Introduction to Knowledge Graphs",
+    "section": "",
+    "text": "This project is part of the Laboratory for Assured AI Applications Development in the Center for Research Computing at the University of Notre Dame. The kglab project for providing some integrated tools for working with Knowledge Graphs as well as an excellent tutorial. Content generation and assistance have been facilitated using OpenAI’s GPT-4 language model. ChatGPT August 3, 2023 version"
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "A “Fast” Introduction to Knowledge Graphs",
+    "section": "",
+    "text": "This project is dual-licensed under:\n\nMIT License for the software components. See LICENSE-MIT for more details.\nCreative Commons Attribution 4.0 International (CC BY 4.0) for the educational content. See LICENSE-CC-BY for more details.\nThe kglab submodule from derwen.ai is licensed under the MIT License.\n\nYou are free to use the project under either of the licenses, depending on your needs."
   }
 ]

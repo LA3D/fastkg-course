@@ -1,0 +1,64 @@
+// For more details, see https://aka.ms/devcontainer.json.
+{
+    "build": {
+        "context": ".",
+        "dockerfile": "Dockerfile"
+    },
+    // 👇 Features to add to the dev container. More info: https://containers.dev/features and https://containers.dev/implementors/features.
+    "features": {
+		// Install Quarto CLI for nbdev
+		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
+		"version": "latest"
+		}
+	  },
+
+    // Uncomment to install NVIDIA CUDA - required for a GPU-powered codespace. For more details, see https://github.com/fastai/course22/blob/master/getting-started-with-codespaces.md#gpu-powered-codespaces
+    // "features": {
+    //     "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+    //         "installCudnn": true
+    //     }
+    // },
+
+    "hostRequirements": {
+        "storage": "64gb"
+    },
+    "runArgs": [
+        "--shm-size=16g"
+   ],
+
+   	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+
+			// Set *default* container specific settings.json values on container create.
+			"settings": { 
+				//"python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python"
+				// "python.linting.enabled": true,
+				// "python.linting.pylintEnabled": true,				
+			},
+			
+        	// Add the IDs of extensions you want installed when the container is created.
+        	"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"donjayamanne.python-environment-manager",
+				"donjayamanne.python-extension-pack",
+				"kevinrose.vsc-python-indent",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.jupyter-renderers",
+				"mikestead.dotenv",
+				"GitHub.copilot-nightly",
+				"GitHub.codespaces",
+				"streetsidesoftware.code-spell-checker",
+				"Zazuko.vscode-rdf-sketch",
+				"stardog-union.vscode-stardog-languages"
+			]
+		}
+	},
+	"postCreateCommand": "git submodule update --init --recursive"
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	//"remoteUser": "vscode"
+
+}

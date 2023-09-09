@@ -1,14 +1,18 @@
 project:
   type: website
   output-dir: docs
-
+  render:
+    - "*.qmd"
+    - "*.ipynb"
+    - "!kglab/"
+    
 website:
   title: "A Quick Course on Knowledge Graphs"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - 00_intro.ipynb
+      - 01_intro.ipynb
 
 format:
   html:
