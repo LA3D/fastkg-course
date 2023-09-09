@@ -13,7 +13,7 @@ Welcome to FastKG-Course, an interactive course designed to make you proficient 
 - Use of fast.ai and kglab libraries
 
 ## Getting Started
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/LA3D/fastkg-course)
+[![](https://github.com/codespaces/badge.svg)](https://codespaces.new/LA3D/fastkg-course)
 
 1. (Optional) Fork this repository
 1. Open the project in [GitHub Codespaces](https://github.com/features/codespaces)
