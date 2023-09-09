@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "A Quick Course on Knowledge Graphs"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - 00_intro.ipynb
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+
+
+
