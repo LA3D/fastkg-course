@@ -1,7 +1,5 @@
 ---
-title: "fastkg-course"
+title: "A \"Fast\" Introduction to Knowledge Graphs"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+{{< include README.md >}}

@@ -1,2 +1,2 @@
-# fastkg
-Devcontainer experiment for using Fast.ai approach to Knowledge Graphs
+# Using the "Fast" Approach for Teaching Knowledge Grpahs
+This website is meant to provide a quick reference to Knowledge Graphs (KGs), Knowledge Graph Technologies, Semantic Technologies and Large Language Models for various projects part of [Laboratory for Assured AI Applications Development](https://la3d.github.io/nuggets/) in the [Center for Research Computing](https://crc.nd.edu/) at the [University of Notre Dame](https://www.nd.edu).

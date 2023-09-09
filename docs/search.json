@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "00_intro.html",
+    "href": "00_intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Code\nfrom ipywidgets import interact\nimport networkx as nx\nimport matplotlib.pyplot as plt\n\ndef plot_graph(nodes=5, edges=5):\n    G = nx.random_graphs.erdos_renyi_graph(nodes, edges / nodes)\n    nx.draw(G, with_labels=True)\n    plt.show()\n\ninteract(plot_graph, nodes=(2, 10), edges=(1, 20))\n\n\nModuleNotFoundError: No module named 'ipywidgets'"
+  },
+  {
+    "objectID": "00_intro.html#introduction-to-knowledge-graphs-and-semantic-technologies",
+    "href": "00_intro.html#introduction-to-knowledge-graphs-and-semantic-technologies",
+    "title": "Introduction",
+    "section": "",
+    "text": "Code\nfrom ipywidgets import interact\nimport networkx as nx\nimport matplotlib.pyplot as plt\n\ndef plot_graph(nodes=5, edges=5):\n    G = nx.random_graphs.erdos_renyi_graph(nodes, edges / nodes)\n    nx.draw(G, with_labels=True)\n    plt.show()\n\ninteract(plot_graph, nodes=(2, 10), edges=(1, 20))\n\n\nModuleNotFoundError: No module named 'ipywidgets'"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A “Fast” Introduction to Knowledge Graphs",
+    "section": "",
+    "text": "Using the “Fast” Approach for Teaching Knowledge Grpahs\nThis website is meant to provide a quick reference to Knowledge Graphs (KGs), Knowledge Graph Technologies, Semantic Technologies and Large Language Models for various projects part of Laboratory for Assured AI Applications Development in the Center for Research Computing at the University of Notre Dame."
+  }
+]
