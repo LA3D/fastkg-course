@@ -1,0 +1,3 @@
+[submodule "kglab"]
+	path = kglab
+	url = https://github.com/DerwenAI/kglab.git
