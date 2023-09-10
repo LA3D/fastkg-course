@@ -13,6 +13,7 @@ website:
       - href: index.qmd
         text: Home
       - 01_intro.ipynb
+      - 02_jsonld.ipynb
 
 format:
   html:

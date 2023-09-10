@@ -19,12 +19,12 @@
     //     }
     // },
 
-    "hostRequirements": {
-        "storage": "64gb"
-    },
-    "runArgs": [
-        "--shm-size=16g"
-   ],
+    //"hostRequirements": {
+    //    "storage": "64gb"
+    //},
+   // "runArgs": [
+   //     "--shm-size=16g"
+   //],
 
    	// Configure tool-specific properties.
 	"customizations": {
