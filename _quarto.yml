@@ -12,7 +12,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - 01_intro.ipynb
+      - href: 01_intro.ipynb
+        text: Quickstart
       - 02_jsonld.ipynb
 
 format:

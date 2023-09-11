@@ -1,5 +1,3 @@
-# FastKG-Course: A Fast.ai Approach to Learning Knowledge Graphs
-
 ![](images/logo.png)
 
 ## Introduction
