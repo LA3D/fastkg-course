@@ -9,7 +9,7 @@
 <meta name="author" content="Charles F. Vardeman II">
 <meta name="dcterms.date" content="2023-09-09">
 
-<title>A Quick Course on Knowledge Graphs - Introduction</title>
+<title>A Quick Course on Knowledge Graphs - Quickstart to Knowledge Graphs with Semantic Technologies: A fast.ai Approach</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,7 @@ div.csl-indent {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./01_intro.html" rel="" target="" aria-current="page">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Quickstart to Knowledge Graphs with Semantic Technologies: A fast.ai Approach</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./02_jsonld.html" rel="" target="">
@@ -164,15 +164,12 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-fast-start-to-knowledge-graphs-using-semantic-technologies" id="toc-a-fast-start-to-knowledge-graphs-using-semantic-technologies" class="nav-link active" data-scroll-target="#a-fast-start-to-knowledge-graphs-using-semantic-technologies">A “Fast” start to Knowledge Graphs using Semantic Technologies</a>
-  <ul class="collapse">
+  <li><a href="#why-the-fast.ai-approach" id="toc-why-the-fast.ai-approach" class="nav-link active" data-scroll-target="#why-the-fast.ai-approach">Why the fast.ai Approach?</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#understanding-of-the-semantic-web-stack" id="toc-understanding-of-the-semantic-web-stack" class="nav-link" data-scroll-target="#understanding-of-the-semantic-web-stack">Understanding of the <code>Semantic Web</code> Stack</a></li>
-  </ul></li>
-  <li><a href="#knowledge-graphs" id="toc-knowledge-graphs" class="nav-link" data-scroll-target="#knowledge-graphs">Knowledge Graphs</a>
-  <ul class="collapse">
-  <li><a href="#tools-for-constructing-knowledge-graphs" id="toc-tools-for-constructing-knowledge-graphs" class="nav-link" data-scroll-target="#tools-for-constructing-knowledge-graphs">Tools for constructing knowledge graphs</a></li>
-  </ul></li>
+  <li><a href="#the-legacy-of-the-semantic-web" id="toc-the-legacy-of-the-semantic-web" class="nav-link" data-scroll-target="#the-legacy-of-the-semantic-web">The Legacy of The Semantic Web</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a></li>
+  <li><a href="#knowledge-graphs-what-you-need-to-know" id="toc-knowledge-graphs-what-you-need-to-know" class="nav-link" data-scroll-target="#knowledge-graphs-what-you-need-to-know">Knowledge Graphs: What You Need to Know</a></li>
+  <li><a href="#tooling-up" id="toc-tooling-up" class="nav-link" data-scroll-target="#tooling-up">Tooling Up</a></li>
   </ul>
 </nav>
     </div>
@@ -181,7 +178,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Quickstart to Knowledge Graphs with Semantic Technologies: A fast.ai Approach</h1>
 </div>
 
 
@@ -208,18 +205,20 @@ div.csl-indent {
 
 </header>
 
-<section id="a-fast-start-to-knowledge-graphs-using-semantic-technologies" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="a-fast-start-to-knowledge-graphs-using-semantic-technologies">A “Fast” start to Knowledge Graphs using Semantic Technologies</h2>
-<p>This set of jupyter notebooks and codespace are meant to <a href="https://www.wikidata.org/wiki/Q1195936"><code>bootstrap</code></a> your understanding of Knowledge Engineering, Knowledge Graphs, Linked Data and how Generative AI can leverage these technologies to be more factual. We say a <code>Fast</code> start because we want to use the learning principles as espoused by the <a href="https://www.fast.ai/">fast.ai - fast.ai—Making neural nets uncool again</a> and summarized in the blog <a href="https://www.fast.ai/posts/2016-10-08-teaching-philosophy.html">fast.ai - Providing a Good Education in Deep Learning</a>. Hopefully this will make Knowledge Engineering just as <code>uncool</code> as neural networks.</p>
+<p>Welcome to this hands-on tutorial, engineered to accelerate your grasp of Knowledge Engineering, Knowledge Graphs, Linked Data, and the role of Generative AI in factual enrichment. We adopt the pedagogical philosophy of <a href="https://www.fast.ai/">fast.ai</a>, as articulated in their blog post <a href="https://www.fast.ai/posts/2016-10-08-teaching-philosophy.html">Providing a Good Education in Deep Learning</a>, to make the realm of Knowledge Engineering as approachable as neural networks have become.</p>
+<section id="why-the-fast.ai-approach" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-fast.ai-approach">Why the fast.ai Approach?</h3>
+<p>The fast.ai philosophy emphasizes learning by doing, with a top-down approach that introduces complex topics through practical examples and projects. This hands-on, application-first methodology allows for quick, tangible results that not only bolster understanding but also demonstrate the utility of the subject matter. By incorporating these principles, we aim to demystify the seemingly arcane field of Knowledge Engineering and to deliver both the ‘why’ and the ‘how’ in a manner that encourages proactive learning.</p>
+</section>
 <section id="prerequisites" class="level3">
 <h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
-<p>Given that we are building on the Fast.ai approach, we will leverage some of their introductory materials for doing machine learning and working with AI. At a minimum, the readers should be familiar with:</p>
+<p>To harmonize with the fast.ai approach, this tutorial leverages some of their key introductory materials. Familiarity with the following topics is strongly recommended:</p>
 <ul>
-<li><a href="https://course.fast.ai/Lessons/lesson1.html">Practical Deep Learning for Coders - 1: Getting started (fast.ai)</a></li>
-<li><a href="https://github.com/fastai/course22/blob/master/01-jupyter-notebook-101.ipynb">course22/01-jupyter-notebook-101.ipynb at master · fastai/course22 (github.com)</a></li>
-<li><a href="https://course.fast.ai/Lessons/lesson2.html">Practical Deep Learning for Coders - 2: Deployment (fast.ai)</a></li>
-<li><a href="https://course.fast.ai/Lessons/lesson3.html">Practical Deep Learning for Coders - 3: Neural net foundations (fast.ai)</a></li>
-<li><a href="https://course.fast.ai/Lessons/lesson4.html">Practical Deep Learning for Coders - 4: Natural Language (NLP) (fast.ai)</a></li>
+<li><a href="https://course.fast.ai/Lessons/lesson1.html">Getting Started with Practical Deep Learning</a></li>
+<li><a href="https://github.com/fastai/course22/blob/master/01-jupyter-notebook-101.ipynb">Jupyter Notebook 101</a></li>
+<li><a href="https://course.fast.ai/Lessons/lesson2.html">Deep Learning Deployment</a></li>
+<li><a href="https://course.fast.ai/Lessons/lesson3.html">Neural Network Foundations</a></li>
+<li><a href="https://course.fast.ai/Lessons/lesson4.html">Natural Language Processing</a></li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -227,39 +226,35 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Use of Generative AI for learning!
+Generative AI as Learning Companions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>It turns out that ChatGPT, Bing Chat, Bard, Claude v2 and other Generative AI Agents tuned for <code>Conversational AI</code> have a decent knowledge of the <a href="https://www.w3.org/2001/sw/Specs.html">“Semantic Web Stack”</a> and are particularly good at using Python tools for the semantic web like <a href="https://rdflib.readthedocs.io/en/stable/">rdflib</a>. We highly recommend using these <code>copilots</code> for creating code blocks, debugging and solving problems. We will leverage these agents in later notebooks for assisting in “ontology” construction.</p>
+<p>Generative AI agents like ChatGPT, Bing Chat, and Bard offer proficiency in Semantic Web technologies and Python tools like <a href="https://rdflib.readthedocs.io/en/stable/">rdflib</a>. They serve as invaluable ‘copilots’ for code generation, debugging, and problem-solving and will be incorporated into later notebooks for ontology construction. Generative AI can also assist with revising text in markdown cells serving as an <code>editor</code> for content.</p>
 </div>
 </div>
 </section>
-<section id="understanding-of-the-semantic-web-stack" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="understanding-of-the-semantic-web-stack">Understanding of the <code>Semantic Web</code> Stack</h3>
-<p>A vision for a <code>semantic web</code> was laid out by the “father” of the World Wide Web Tim Berners-Lee and his co-authors <span class="citation" data-cites="berners-leeSemanticWeb2001">(<a href="#ref-berners-leeSemanticWeb2001" role="doc-biblioref">Berners-Lee, Hendler, and Lassila 2001</a>)</span> in the paper <a href="https://lassila.org/publications/2001/SciAm.pdf">“The Semantic Web”</a> that involved <strong>Software Agents</strong>, <strong>Shared Formal Concepts called Ontologies</strong>, and <a href="https://www.w3.org/DesignIssues/LinkedData.html"><strong>Linked Data</strong></a> to provide the structure for a world driven by <em>Assistive Agents</em>. To further this vision, the standards body for the Web, the World Wide Web Consortium (W3C) created standards for exchanging semantic Knowledge Graphs called the <a href="https://www.w3.org/TR/rdf11-primer/">Resource Description Framework (RDF)</a> and a method for specifying formal shared concepts called <a href="https://www.w3.org/TR/owl2-primer/">Web Ontology Language (OWL)</a>. The publication, “A data engineer’s guide to semantic modeling” <a href="https://zenodo.org/record/3898519/files/A%20data%20engineer%27s%20guide%20to%20semantic%20modelling.pdf?download=1">direct pdf download</a> by Ilaria Maresi <span class="citation" data-cites="ilaria_maresi_2020_3898519">(<a href="#ref-ilaria_maresi_2020_3898519" role="doc-biblioref">Maresi 2020</a>)</span> of <a href="https://www.thehyve.nl/">The Hyve</a> provides a <strong>very</strong> accessible guide to “semantic modeling” and will be the <em>primary</em> reference going forward.</p>
+<section id="the-legacy-of-the-semantic-web" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="the-legacy-of-the-semantic-web">The Legacy of The Semantic Web</h3>
+<p>The vision for a semantic web was first articulated by Tim Berners-Lee and his co-authors in their landmark paper <a href="https://lassila.org/publications/2001/SciAm.pdf">“The Semantic Web”</a> published in Scientific American <span class="citation" data-cites="berners-leeSemanticWeb2001">(<a href="#ref-berners-leeSemanticWeb2001" role="doc-biblioref">Berners-Lee, Hendler, and Lassila 2001</a>)</span>. This pioneering work envisaged a web ecosystem where <strong>Software Agents</strong>, <strong>Shared Ontologies</strong>, and <a href="https://www.w3.org/DesignIssues/LinkedData.html"><strong>Linked Data</strong></a> would serve as the backbone for assistive agents and intelligent systems. Our tutorial aligns with this vision and the standards that have evolved from it, such as <a href="https://www.w3.org/TR/rdf11-primer/">RDF</a> and <a href="https://www.w3.org/TR/owl2-primer/">OWL</a>.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-berners-leeSemanticWeb2001" class="csl-entry" role="listitem">
 Berners-Lee, Tim, James Hendler, and Ora Lassila. 2001. <span>“The <span>Semantic Web</span>.”</span> <em>Scientific American</em> 284 (5): 34–43. <a href="https://www.jstor.org/stable/26059207">https://www.jstor.org/stable/26059207</a>.
-</div><div id="ref-ilaria_maresi_2020_3898519" class="csl-entry" role="listitem">
+</div></div></section>
+<section id="further-reading" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="further-reading">Further Reading</h3>
+<p>For an in-depth technical understanding, we recommend the book on Knowledge Graphs as well as the <a href="https://zenodo.org/record/3898519/files/A%20data%20engineer%27s%20guide%20to%20semantic%20modelling.pdf?download=1">“A data engineer’s guide to semantic modeling”</a> by Ilaria Maresi <span class="citation" data-cites="ilaria_maresi_2020_3898519">(@ <a href="#ref-ilaria_maresi_2020_3898519" role="doc-biblioref">Maresi 2020</a>)</span> as key references.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-ilaria_maresi_2020_3898519" class="csl-entry" role="listitem">
 Maresi, Ilaria. 2020. <em>A Data Engineer’s Guide to Semantic Modelling</em>. <span>Zenodo</span>. <a href="https://doi.org/10.5281/zenodo.3898519">https://doi.org/10.5281/zenodo.3898519</a>.
 </div></div></section>
-</section>
-<section id="knowledge-graphs" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="knowledge-graphs">Knowledge Graphs</h2>
-<p>A more technical reference on the topic of <strong>Knowledge Graphs</strong> is provided in the book <span class="citation" data-cites="kg-book">(<a href="#ref-kg-book" role="doc-biblioref">Hogan et al. 2021</a>)</span> and is the <em>recommended</em> definitive <em>concise</em> reference on Knowledge Graphs. The <a href="https://kgbook.org">HTML version</a> is available online and print versions are published by <code>Morgan &amp; Claypool Publishers</code>. One should be familiar with:</p>
+<section id="knowledge-graphs-what-you-need-to-know" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="knowledge-graphs-what-you-need-to-know">Knowledge Graphs: What You Need to Know</h3>
+<p>For a more technical understanding, the book “Knowledge Graphs” <span class="citation" data-cites="kg-book">(<a href="#ref-kg-book" role="doc-biblioref">Hogan et al. 2021</a>)</span> offers a <a href="https://kgbook.org">definitive guide</a>. Key chapters to review include:</p>
 <div class="no-row-height column-margin column-container"><div id="ref-kg-book" class="csl-entry" role="listitem">
 Hogan, Aidan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutiérrez, Sabrina Kirrane, et al. 2021. <em><span>K</span>nowledge <span>G</span>raphs</em>. Synthesis Lectures on Data, Semantics, and Knowledge 22. Springer. <a href="https://doi.org/10.2200/S01125ED1V01Y202109DSK022">https://doi.org/10.2200/S01125ED1V01Y202109DSK022</a>.
 </div></div><ul>
-<li><a href="https://kgbook.org/#chap-intro">Chapter 1. Introduction</a></li>
-<li><a href="https://kgbook.org/#chap-graph">Chapter 2. Data Graphs</a></li>
-<li><a href="https://kgbook.org/#chap-create">Chapter 6. Creation and Enrichment</a></li>
-<li><a href="https://kgbook.org/#chap-publish">Chapter 7. Publication</a></li>
+<li><a href="https://kgbook.org/#chap-intro">Introduction</a>, <a href="https://kgbook.org/#chap-graph">Data Graphs</a>, <a href="https://kgbook.org/#chap-create">Creation and Enrichment</a>, and <a href="#chap-publish">Publication</a></li>
 </ul>
-<p>Additionally, the following chapters are useful for the kglab tutorial and highly recommended:</p>
-<ul>
-<li><a href="https://kgbook.org/#chap-knowledge">Chapter 3. Schema, Identity, Context</a></li>
-<li><a href="https://kgbook.org/#chap-deductive">Chapter 4. Deductive Knowledge</a></li>
-</ul>
+<p>Additional recommended chapters include <a href="https://kgbook.org/#chap-knowledge">Schema, Identity, Context</a> and <a href="https://kgbook.org/#chap-deductive">Deductive Knowledge</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -270,16 +265,18 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We use the “Knowledge Graphs” books definition of a knowledge graph from the introduction:</p>
+<p>We use the “Knowledge Graph” books definition of a knowledge graph from the introduction:</p>
 <blockquote class="blockquote">
 <p>“… as a graph of data intended to accumulate and convey knowledge of the real world, whose nodes represent entities of interest and whose edges represent relations between these entities.”</p>
 </blockquote>
+<p>This definition is broad enough to include embedding structured Knowledge Graph databases like <a href="https://kuzudb.com/">KùzuDB</a> and <a href="https://gpt-index.readthedocs.io/en/stable/getting_started/concepts.html#retrieval-augmented-generation-rag">Retrieval Augmented Generation (RAG)</a> in frameworks like <a href="https://gpt-index.readthedocs.io/en/stable/index.html">LlamaIndex</a> that can automate LLM based query retrieval using <a href="https://gpt-index.readthedocs.io/en/stable/examples/index_structs/knowledge_graph/KnowledgeGraphDemo.html">knowledge graphs</a> with <code>Large Language Models</code>.</p>
 </div>
 </div>
-<section id="tools-for-constructing-knowledge-graphs" class="level3">
-<h3 class="anchored" data-anchor-id="tools-for-constructing-knowledge-graphs">Tools for constructing knowledge graphs</h3>
-<p><a href="https://derwen.ai/">Derwen.ai</a> has created a Python Package called <a href="https://derwen.ai/docs/kgl/">kglab</a> that “provides a simple abstraction layer in Python for building knowledge graphs.” The <a href="https://derwen.ai/docs/kgl/tutorial/">kglab tutorial</a> is quite good at providing an introduction to the <strong>semantic web</strong> stack and have included <a href="https://github.com/DerwenAI/kglab/">the GitHub repository</a> as a <a href="https://github.blog/2016-02-01-working-with-submodules/">git submodule</a>.</p>
-<p>We particularly recommend working through:</p>
+</section>
+<section id="tooling-up" class="level3">
+<h3 class="anchored" data-anchor-id="tooling-up">Tooling Up</h3>
+<p><a href="https://derwen.ai/">Derwen.ai</a>’s Python package <a href="https://derwen.ai/docs/kgl/">kglab</a> will serve as our primary toolset for building knowledge graphs. The <a href="https://derwen.ai/docs/kgl/tutorial/">kglab tutorial</a> is a complementary resource worth exploring. We have included the tutorial as a [<code>Git Submodule</code>](https://github.blog/2016-02-01-working-with-submodules/ in the kglab directory of this repository.</p>
+<p>We invite you to immerse yourself in the provided examples for hands-on practice and a more comprehensive understanding of knowledge graphs.</p>
 <ul>
 <li><a href="https://derwen.ai/docs/kgl/ex0_0/">Data and Ontology sources - kglab (derwen.ai)</a> in <a href="kglab/examples/ex0_0.ipynb">kglab/examples/ex0_0.pynb</a></li>
 <li><a href="https://derwen.ai/docs/kgl/ex1_0/">Build an RDF graph using <code>RDFlib</code> - kglab (derwen.ai)</a> in <a href="kglab/examples/ex1_0.ipynb">kglab/examples/ex1_0.pynb</a></li>
@@ -289,7 +286,7 @@ Note
 <li><a href="https://derwen.ai/docs/kgl/ex3_0/">Interactive graph visualization with <code>PyVis</code> - kglab (derwen.ai)</a> in in <a href="kglab/examples/ex3_0.ipynb">kglab/examples/ex3_0.pynb</a></li>
 <li><a href="https://derwen.ai/docs/kgl/ex7_0/">Measurement and inference - kglab (derwen.ai)</a> in <a href="kglab/examples/ex7_0.ipynb">kglab/examples/ex7_0.pynb</a></li>
 </ul>
-<p>The Devcontainer in the code space should automatically install from the <a href=".devcontainer/requirements.txt">.devcontainer/requirements.txt</a> should install fastai, kglab and pandas needed for other parts of this tutorial. To check these are installed correctly, the following code block</p>
+<p>The Devcontainer in the code space should automatically install from the <a href=".devcontainer/requirements.txt">.devcontainer/requirements.txt</a> fastai, kglab and pandas needed for other parts of this tutorial. To check these are installed correctly, the following code block</p>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import libraries</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> fastai</span>
@@ -309,7 +306,6 @@ pandas version: 2.1.0</code></pre>
 
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
