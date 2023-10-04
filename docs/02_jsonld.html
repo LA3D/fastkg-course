@@ -218,7 +218,7 @@ div.csl-indent {
 </section>
 <section id="using-generative-ai-to-create-column-types." class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="using-generative-ai-to-create-column-types.">Using Generative AI to create column types.</h2>
-<p><span class="citation" data-cites="koriniColumnTypeAnnotation2023">(<a href="#ref-koriniColumnTypeAnnotation2023" role="doc-biblioref">Korini and Bizer 2023</a>)</span></p>
+<p>We know from <span class="citation" data-cites="koriniColumnTypeAnnotation2023">(<a href="#ref-koriniColumnTypeAnnotation2023" role="doc-biblioref">Korini and Bizer 2023</a>)</span> that GPT-4 does a fairly good job of “Zero-shot” classification of column types. We can use this to create a JSON-LD context for our data. We can then use this context to create a knowledge graph from our data. The video <a href="https://youtu.be/KHNc0WwJ5JA?si=JSNxpd5L3O-6vwyK">Converting Legacy Enterprise Data into Knowledge Graphs with AI and JSON LD | Eliud Polanco</a> does a nice job of explaining the process for Corporate Databases. We will use the same process for our data.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-koriniColumnTypeAnnotation2023" class="csl-entry" role="listitem">
 Korini, Keti, and Christian Bizer. 2023. <span>“Column <span>Type Annotation</span> Using <span>ChatGPT</span>.”</span> July 30, 2023. <a href="http://arxiv.org/abs/2306.00745">http://arxiv.org/abs/2306.00745</a>.
 </div></div><table class="table">
@@ -239,51 +239,36 @@ Korini, Keti, and Christian Bizer. 2023. <span>“Column <span>Type Annotation</
 <td>To generate Turtle data from a Pandas DataFrame:</td>
 </tr>
 <tr class="odd">
-<td>1. <strong>Pandas to JSON</strong>: Convert the DataFrame to JSON format using <code>to_json()</code> with <code>orient='records'</code>.</td>
+<td>1. <strong>Pandas to JSON</strong>: Convert the DataFrame to JSON format using <code>to_json()</code> with <code>orient='records'</code>. 1. <strong>Add UUID and Type to JSON</strong>: Iterate through the JSON objects and add a UUID prefixed by <code>urn:uuid:</code> and a <code>@type</code> with the value <code>Person</code>. 1. <strong>Create JSON-LD Context</strong>: Define a JSON-LD context to map JSON keys to RDF vocabularies. Include mappings for the UUID and <code>rdf:type</code>. 1. <strong>Combine to Form JSON-LD</strong>: Create a JSON-LD object that incorporates both the JSON data and the JSON-LD context. Put the JSON objects inside a <code>@graph</code> array. 1. <strong>Load into RDFlib</strong>: Use RDFlib’s <code>parse()</code> method to load the JSON-LD data into an RDF graph. 1. <strong>Serialize to Turtle</strong>: Use RDFlib’s <code>serialize()</code> method to convert the RDF graph to Turtle format.</td>
 </tr>
 <tr class="even">
-<td>2. <strong>Add UUID and Type to JSON</strong>: Iterate through the JSON objects and add a UUID prefixed by <code>urn:uuid:</code> and a <code>@type</code> with the value <code>Person</code>.</td>
-</tr>
-<tr class="odd">
-<td>3. <strong>Create JSON-LD Context</strong>: Define a JSON-LD context to map JSON keys to RDF vocabularies. Include mappings for the UUID and <code>rdf:type</code>.</td>
-</tr>
-<tr class="even">
-<td>4. <strong>Combine to Form JSON-LD</strong>: Create a JSON-LD object that incorporates both the JSON data and the JSON-LD context. Put the JSON objects inside a <code>@graph</code> array.</td>
-</tr>
-<tr class="odd">
-<td>5. <strong>Load into RDFlib</strong>: Use RDFlib’s <code>parse()</code> method to load the JSON-LD data into an RDF graph.</td>
-</tr>
-<tr class="even">
-<td>6. <strong>Serialize to Turtle</strong>: Use RDFlib’s <code>serialize()</code> method to convert the RDF graph to Turtle format.</td>
-</tr>
-<tr class="odd">
 <td>## Code Prompt</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Here’s a condensed Python code snippet that includes all the steps:</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>```python import pandas as pd import json import uuid from rdflib import Graph</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td># Step 1: Convert DataFrame to JSON data = {‘Name’: [‘Alice’, ‘Bob’], ‘Age’: [25, 30], ‘Occupation’: [‘Engineer’, ‘Doctor’]} df = pd.DataFrame(data) json_data = df.to_json(orient=‘records’)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td># Step 2: Add UUID and Type to JSON json_data_dict = json.loads(json_data) for obj in json_data_dict: obj[“UUID”] = “urn:uuid:” + str(uuid.uuid4()) obj[“<span class="citation" data-cites="type">(<a href="#ref-type" role="doc-biblioref"><strong>type?</strong></a>)</span>”] = “Person”</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td># Step 3: Create JSON-LD Context context = { “<span class="citation" data-cites="context">(<a href="#ref-context" role="doc-biblioref"><strong>context?</strong></a>)</span>”: { “UUID”: “<span class="citation" data-cites="id">(<a href="#ref-id" role="doc-biblioref"><strong>id?</strong></a>)</span>”, “Name”: “http://schema.org/name”, “Age”: “http://schema.org/age”, “Occupation”: “http://schema.org/occupation”, “<span class="citation" data-cites="type">(<a href="#ref-type" role="doc-biblioref"><strong>type?</strong></a>)</span>”: “http://www.w3.org/1999/02/22-rdf-syntax-ns#type”, “Person”: “http://xmlns.com/foaf/0.1/Person” } }</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td># Step 4: Combine to Form JSON-LD json_ld_data = { “<span class="citation" data-cites="context">(<a href="#ref-context" role="doc-biblioref"><strong>context?</strong></a>)</span>”: context[“<span class="citation" data-cites="context">(<a href="#ref-context" role="doc-biblioref"><strong>context?</strong></a>)</span>”], “<span class="citation" data-cites="graph">(<a href="#ref-graph" role="doc-biblioref"><strong>graph?</strong></a>)</span>”: json_data_dict }</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td># Step 5: Load into RDFlib g = Graph() g.parse(data=json.dumps(json_ld_data), format=‘json-ld’)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td># Step 6: Serialize to Turtle turtle_data = g.serialize(format=‘turtle’) print(turtle_data) ```</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>This will generate Turtle data that includes UUIDs and a <code>rdf:type</code> of <code>Person</code>, aligning with your requirements.</td>
 </tr>
 </tbody>
@@ -297,12 +282,12 @@ Korini, Keti, and Christian Bizer. 2023. <span>“Column <span>Type Annotation</
 <h2 class="anchored" data-anchor-id="our-general-procedure-towards-automated-kg-construction-using-llms">Our general procedure towards automated KG Construction using LLMs</h2>
 <p>I understand the workflow you’ve outlined for constructing a knowledge graph from CSV data using JSON-LD. The process includes six major steps:</p>
 <ol type="1">
-<li><p><strong>ETL from CSV to JSON</strong>: Extract, transform, and load the data from a CSV file into a JSON object. Here, we’ll use Python libraries like pandas.</p></li>
-<li><p><strong>Creating JSON-LD Vocabulary File</strong>: Establish the terms, data types, and definitions in a JSON-LD vocabulary file based on the LLM template.</p></li>
-<li><p><strong>Convert from JSON to JSON-LD</strong>: Extend the JSON data to JSON-LD by adding the context, linking it with the vocabulary’s IRI, wrapping the data in a <span class="citation" data-cites="graph">(<a href="#ref-graph" role="doc-biblioref"><strong>graph?</strong></a>)</span> object, and assigning unique IDs.</p></li>
-<li><p><strong>Introduce New Ontology File</strong>: Create another JSON-LD vocabulary file to serve as an ontology.</p></li>
-<li><p><strong>Link Vocabularies in Another JSON-LD File</strong>: Establish relationships between the vocabularies, definitions, and ontologies in a separate JSON-LD file.</p></li>
-<li><p><strong>Capturing Provenance Information</strong>: Document metadata about the <span class="citation" data-cites="graph">(<a href="#ref-graph" role="doc-biblioref"><strong>graph?</strong></a>)</span> object to capture its origin and transformation history.</p></li>
+<li><strong>ETL from CSV to JSON</strong>: Extract, transform, and load the data from a CSV file into a JSON object. Here, we’ll use Python libraries like pandas.</li>
+<li><strong>Creating JSON-LD Vocabulary File</strong>: Establish the terms, data types, and definitions in a JSON-LD vocabulary file based on the LLM template.</li>
+<li><strong>Convert from JSON to JSON-LD</strong>: Extend the JSON data to JSON-LD by adding the context, linking it with the vocabulary’s IRI, wrapping the data in a <span class="citation" data-cites="graph">(<a href="#ref-graph" role="doc-biblioref"><strong>graph?</strong></a>)</span> object, and assigning unique IDs.</li>
+<li><strong>Introduce New Ontology File</strong>: Create another JSON-LD vocabulary file to serve as an ontology.</li>
+<li><strong>Link Vocabularies in Another JSON-LD File</strong>: Establish relationships between the vocabularies, definitions, and ontologies in a separate JSON-LD file.</li>
+<li><strong>Capturing Provenance Information</strong>: Document metadata about the <span class="citation" data-cites="graph">(<a href="#ref-graph" role="doc-biblioref"><strong>graph?</strong></a>)</span> object to capture its origin and transformation history.</li>
 </ol>
 </section>
 <section id="example-using-json-ld-to-construct-a-knowledge-graph-from-wikipedia-tables" class="level2">
